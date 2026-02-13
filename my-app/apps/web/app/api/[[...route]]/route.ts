@@ -1,3 +1,4 @@
+export const dynamc = "force-dynamic";
 import {app} from "@repo/server"
 import { handle } from 'hono/vercel'
 

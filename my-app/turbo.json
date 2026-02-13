@@ -3,7 +3,7 @@
   "ui": "tui",
   "tasks": {
     "build": {
-      "env": ["DATABASE_URL"],
+      "env": ["DATABASE_URL","JWT_SECRET","COOKIE_SECRET"],
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": [
