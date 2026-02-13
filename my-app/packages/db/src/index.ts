@@ -3,7 +3,6 @@ import { drizzle } from "drizzle-orm/node-postgres";
 import { todos } from "./schema";
 import {user} from "./loginschema";
 const { Pool } = pkg;
-import "dotenv/config";
 
 
 let pool: pkg.Pool | null = null;
