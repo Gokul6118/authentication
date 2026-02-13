@@ -103,10 +103,18 @@ app.post("/login", async (c) => {
 
   const u = result[0];
 
-  const valid = await bcrypt.compare(
-    password,
-    u.password
+
+if (!u) {
+  return c.json(
+    { message: "Invalid credentials" },
+    401
   );
+}
+
+const valid = await bcrypt.compare(
+  password,
+  u.password
+);
 
   if (!valid) {
     return c.json(
